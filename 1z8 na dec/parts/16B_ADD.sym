@@ -1,0 +1,234 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-10-09 14:15:55
+SYM  #16B_ADD
+BB(0,0,20,340)
+TITLE 10 -7  #16B_ADD
+MODEL 6000
+REC(5,5,10,330)
+PIN(0,330,0.00,0.00)C0
+PIN(0,10,0.00,0.00)A0
+PIN(0,170,0.00,0.00)B0
+PIN(0,320,0.00,0.00)Bf
+PIN(0,160,0.00,0.00)Af
+PIN(0,310,0.00,0.00)Be
+PIN(0,150,0.00,0.00)Ae
+PIN(0,300,0.00,0.00)Bd
+PIN(0,140,0.00,0.00)Ad
+PIN(0,290,0.00,0.00)Bc
+PIN(0,130,0.00,0.00)Ac
+PIN(0,280,0.00,0.00)Bb
+PIN(0,120,0.00,0.00)Ab
+PIN(0,270,0.00,0.00)Ba
+PIN(0,110,0.00,0.00)Aa
+PIN(0,260,0.00,0.00)B9
+PIN(0,100,0.00,0.00)A9
+PIN(0,250,0.00,0.00)B8
+PIN(0,90,0.00,0.00)A8
+PIN(0,240,0.00,0.00)B7
+PIN(0,80,0.00,0.00)A7
+PIN(0,230,0.00,0.00)B6
+PIN(0,70,0.00,0.00)A6
+PIN(0,220,0.00,0.00)B5
+PIN(0,60,0.00,0.00)A5
+PIN(0,210,0.00,0.00)B4
+PIN(0,50,0.00,0.00)A4
+PIN(0,200,0.00,0.00)B3
+PIN(0,40,0.00,0.00)A3
+PIN(0,190,0.00,0.00)B2
+PIN(0,30,0.00,0.00)A2
+PIN(0,180,0.00,0.00)B1
+PIN(0,20,0.00,0.00)A1
+PIN(20,10,2.00,1.00)Cf
+PIN(20,170,2.00,1.00)Wf
+PIN(20,20,2.00,1.00)W0
+PIN(20,160,2.00,1.00)We
+PIN(20,150,2.00,1.00)Wd
+PIN(20,140,2.00,1.00)Wc
+PIN(20,130,2.00,1.00)Wb
+PIN(20,120,2.00,1.00)Wa
+PIN(20,110,2.00,1.00)W9
+PIN(20,100,2.00,1.00)W8
+PIN(20,90,2.00,1.00)W7
+PIN(20,80,2.00,1.00)W6
+PIN(20,70,2.00,1.00)W5
+PIN(20,60,2.00,1.00)W4
+PIN(20,50,2.00,1.00)W3
+PIN(20,40,2.00,1.00)W2
+PIN(20,30,2.00,1.00)W1
+LIG(0,330,5,330)
+LIG(0,10,5,10)
+LIG(0,170,5,170)
+LIG(0,320,5,320)
+LIG(0,160,5,160)
+LIG(0,310,5,310)
+LIG(0,150,5,150)
+LIG(0,300,5,300)
+LIG(0,140,5,140)
+LIG(0,290,5,290)
+LIG(0,130,5,130)
+LIG(0,280,5,280)
+LIG(0,120,5,120)
+LIG(0,270,5,270)
+LIG(0,110,5,110)
+LIG(0,260,5,260)
+LIG(0,100,5,100)
+LIG(0,250,5,250)
+LIG(0,90,5,90)
+LIG(0,240,5,240)
+LIG(0,80,5,80)
+LIG(0,230,5,230)
+LIG(0,70,5,70)
+LIG(0,220,5,220)
+LIG(0,60,5,60)
+LIG(0,210,5,210)
+LIG(0,50,5,50)
+LIG(0,200,5,200)
+LIG(0,40,5,40)
+LIG(0,190,5,190)
+LIG(0,30,5,30)
+LIG(0,180,5,180)
+LIG(0,20,5,20)
+LIG(15,10,20,10)
+LIG(15,170,20,170)
+LIG(15,20,20,20)
+LIG(15,160,20,160)
+LIG(15,150,20,150)
+LIG(15,140,20,140)
+LIG(15,130,20,130)
+LIG(15,120,20,120)
+LIG(15,110,20,110)
+LIG(15,100,20,100)
+LIG(15,90,20,90)
+LIG(15,80,20,80)
+LIG(15,70,20,70)
+LIG(15,60,20,60)
+LIG(15,50,20,50)
+LIG(15,40,20,40)
+LIG(15,30,20,30)
+LIG(5,5,5,335)
+LIG(5,5,15,5)
+LIG(15,5,15,335)
+LIG(15,335,5,335)
+VLG module 14B_ADD( C0,A0,B0,Bf,Af,Be,Ae,Bd,
+VLG  Ad,Bc,Ac,Bb,Ab,Ba,Aa,B9,
+VLG  A9,B8,A8,B7,A7,B6,A6,B5,
+VLG  A5,B4,A4,B3,A3,B2,A2,B1,
+VLG  A1,Cf,Wf,W0,We,Wd,Wc,Wb,
+VLG  Wa,W9,W8,W7,W6,W5,W4,W3,
+VLG  W2,W1);
+VLG  input C0,A0,B0,Bf,Af,Be,Ae,Bd;
+VLG  input Ad,Bc,Ac,Bb,Ab,Ba,Aa,B9;
+VLG  input A9,B8,A8,B7,A7,B6,A6,B5;
+VLG  input A5,B4,A4,B3,A3,B2,A2,B1;
+VLG  input A1;
+VLG  output Cf,Wf,W0,We,Wd,Wc,Wb,Wa;
+VLG  output W9,W8,W7,W6,W5,W4,W3,W2;
+VLG  output W1;
+VLG  wire w6,w12,w16,w26,w30,w40,w44,w54;
+VLG  wire w55,w61,w62,w63,w64,w65,w66,w67;
+VLG  wire w68,w69,w70,w71,w72,w73,w74,w75;
+VLG  wire w76,w77,w78,w79,w80,w81,w82,w83;
+VLG  wire w84,w85,w86,w87,w88,w89,w90,w91;
+VLG  wire w92,w93,w94,w95,w96,w97,w98,w99;
+VLG  wire w100,w101,w102,w103,w104,w105,w106,w107;
+VLG  wire w108,w109,w110,w111,w112,w113,w114,w115;
+VLG  wire w116,w117,w118,w119,w120,w121,w122,w123;
+VLG  wire w124,w125,w126,w127,w128,w129,w130;
+VLG  or #(2) or3_1_1(w6,w67,w68,w69);
+VLG  and #(1) and2_2_2(w69,C0,B0);
+VLG  and #(1) and2_3_3(w68,C0,A0);
+VLG  and #(1) and2_4_4(w67,B0,A0);
+VLG  xor #(1) xor2_5_5(W0,w70,C0);
+VLG  xor #(1) xor2_6_6(w70,A0,B0);
+VLG  or #(2) or3_1_7(w12,w71,w72,w73);
+VLG  and #(1) and2_2_8(w73,w6,B1);
+VLG  and #(1) and2_3_9(w72,w6,A1);
+VLG  and #(1) and2_4_10(w71,B1,A1);
+VLG  xor #(1) xor2_5_11(W1,w74,w6);
+VLG  xor #(1) xor2_6_12(w74,A1,B1);
+VLG  or #(2) or3_1_13(w16,w75,w76,w77);
+VLG  and #(1) and2_2_14(w77,w12,B2);
+VLG  and #(1) and2_3_15(w76,w12,A2);
+VLG  and #(1) and2_4_16(w75,B2,A2);
+VLG  xor #(1) xor2_5_17(W2,w78,w12);
+VLG  xor #(1) xor2_6_18(w78,A2,B2);
+VLG  or #(2) or3_1_19(w26,w79,w80,w81);
+VLG  and #(1) and2_2_20(w81,w16,B3);
+VLG  and #(1) and2_3_21(w80,w16,A3);
+VLG  and #(1) and2_4_22(w79,B3,A3);
+VLG  xor #(1) xor2_5_23(W3,w82,w16);
+VLG  xor #(1) xor2_6_24(w82,A3,B3);
+VLG  or #(2) or3_1_25(w30,w83,w84,w85);
+VLG  and #(1) and2_2_26(w85,w26,B4);
+VLG  and #(1) and2_3_27(w84,w26,A4);
+VLG  and #(1) and2_4_28(w83,B4,A4);
+VLG  xor #(1) xor2_5_29(W4,w86,w26);
+VLG  xor #(1) xor2_6_30(w86,A4,B4);
+VLG  or #(2) or3_1_31(w40,w87,w88,w89);
+VLG  and #(1) and2_2_32(w89,w30,B5);
+VLG  and #(1) and2_3_33(w88,w30,A5);
+VLG  and #(1) and2_4_34(w87,B5,A5);
+VLG  xor #(1) xor2_5_35(W5,w90,w30);
+VLG  xor #(1) xor2_6_36(w90,A5,B5);
+VLG  or #(2) or3_1_37(w44,w91,w92,w93);
+VLG  and #(1) and2_2_38(w93,w40,B6);
+VLG  and #(1) and2_3_39(w92,w40,A6);
+VLG  and #(1) and2_4_40(w91,B6,A6);
+VLG  xor #(1) xor2_5_41(W6,w94,w40);
+VLG  xor #(1) xor2_6_42(w94,A6,B6);
+VLG  or #(2) or3_1_43(w54,w95,w96,w97);
+VLG  and #(1) and2_2_44(w97,w44,B7);
+VLG  and #(1) and2_3_45(w96,w44,A7);
+VLG  and #(1) and2_4_46(w95,B7,A7);
+VLG  xor #(1) xor2_5_47(W7,w98,w44);
+VLG  xor #(1) xor2_6_48(w98,A7,B7);
+VLG  or #(2) or3_1_49(Cf,w99,w100,w101);
+VLG  and #(1) and2_2_50(w101,w55,Bf);
+VLG  and #(1) and2_3_51(w100,w55,Af);
+VLG  and #(1) and2_4_52(w99,Bf,Af);
+VLG  xor #(1) xor2_5_53(Wf,w102,w55);
+VLG  xor #(1) xor2_6_54(w102,Af,Bf);
+VLG  or #(2) or3_1_55(w55,w103,w104,w105);
+VLG  and #(1) and2_2_56(w105,w61,Be);
+VLG  and #(1) and2_3_57(w104,w61,Ae);
+VLG  and #(1) and2_4_58(w103,Be,Ae);
+VLG  xor #(1) xor2_5_59(We,w106,w61);
+VLG  xor #(1) xor2_6_60(w106,Ae,Be);
+VLG  or #(2) or3_1_61(w61,w107,w108,w109);
+VLG  and #(1) and2_2_62(w109,w62,Bd);
+VLG  and #(1) and2_3_63(w108,w62,Ad);
+VLG  and #(1) and2_4_64(w107,Bd,Ad);
+VLG  xor #(1) xor2_5_65(Wd,w110,w62);
+VLG  xor #(1) xor2_6_66(w110,Ad,Bd);
+VLG  or #(2) or3_1_67(w62,w111,w112,w113);
+VLG  and #(1) and2_2_68(w113,w63,Bc);
+VLG  and #(1) and2_3_69(w112,w63,Ac);
+VLG  and #(1) and2_4_70(w111,Bc,Ac);
+VLG  xor #(1) xor2_5_71(Wc,w114,w63);
+VLG  xor #(1) xor2_6_72(w114,Ac,Bc);
+VLG  or #(2) or3_1_73(w63,w115,w116,w117);
+VLG  and #(1) and2_2_74(w117,w64,Bb);
+VLG  and #(1) and2_3_75(w116,w64,Ab);
+VLG  and #(1) and2_4_76(w115,Bb,Ab);
+VLG  xor #(1) xor2_5_77(Wb,w118,w64);
+VLG  xor #(1) xor2_6_78(w118,Ab,Bb);
+VLG  or #(2) or3_1_79(w64,w119,w120,w121);
+VLG  and #(1) and2_2_80(w121,w65,Ba);
+VLG  and #(1) and2_3_81(w120,w65,Aa);
+VLG  and #(1) and2_4_82(w119,Ba,Aa);
+VLG  xor #(1) xor2_5_83(Wa,w122,w65);
+VLG  xor #(1) xor2_6_84(w122,Aa,Ba);
+VLG  or #(2) or3_1_85(w65,w123,w124,w125);
+VLG  and #(1) and2_2_86(w125,w66,B9);
+VLG  and #(1) and2_3_87(w124,w66,A9);
+VLG  and #(1) and2_4_88(w123,B9,A9);
+VLG  xor #(1) xor2_5_89(W9,w126,w66);
+VLG  xor #(1) xor2_6_90(w126,A9,B9);
+VLG  or #(2) or3_1_91(w66,w127,w128,w129);
+VLG  and #(1) and2_2_92(w129,w54,B8);
+VLG  and #(1) and2_3_93(w128,w54,A8);
+VLG  and #(1) and2_4_94(w127,B8,A8);
+VLG  xor #(1) xor2_5_95(W8,w130,w54);
+VLG  xor #(1) xor2_6_96(w130,A8,B8);
+VLG endmodule
+FSYM

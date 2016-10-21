@@ -1,0 +1,33 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-11-28 00:14:34
+SYM  #1badder
+BB(0,0,20,40)
+TITLE 10 -7  #1badder
+MODEL 6000
+REC(5,5,10,30)
+PIN(0,30,0.00,0.00)Cwe
+PIN(0,10,0.00,0.00)A
+PIN(0,20,0.00,0.00)B
+PIN(20,10,2.00,1.00)Q
+PIN(20,20,2.00,1.00)Cwy
+LIG(0,30,5,30)
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(15,10,20,10)
+LIG(15,20,20,20)
+LIG(5,5,5,35)
+LIG(5,5,15,5)
+LIG(15,5,15,35)
+LIG(15,35,5,35)
+VLG module 1badder( Cwe,A,B,Q,Cwy);
+VLG  input Cwe,A,B;
+VLG  output Q,Cwy;
+VLG  wire w3,w7,w8,w9,;
+VLG  xor #(2) xor2_1(Q,w3,A);
+VLG  xor #(2) xor2_2(w3,B,Cwe);
+VLG  xor #(2) xor2_3(w7,B,Cwe);
+VLG  or #(2) or2_4(Cwy,w8,w9);
+VLG  and #(2) and2_5(w9,Cwe,B);
+VLG  and #(2) and2_6(w8,A,w7);
+VLG endmodule
+FSYM

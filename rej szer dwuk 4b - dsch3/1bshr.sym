@@ -1,0 +1,36 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-10-27 01:01:03
+SYM  #1bshift
+BB(0,0,45,60)
+TITLE 10 -7  #jednobitowy rejestr szeregowy
+MODEL 6000
+REC(5,5,35,50)
+PIN(0,10,0.00,0.00)mode
+PIN(0,40,0.00,0.00)clk
+PIN(0,30,0.00,0.00)rst
+PIN(45,20,0.00,0.00)in_rev
+PIN(0,20,0.00,0.00)in
+PIN(25,60,2.00,1.00)out
+PIN(45,40,2.00,1.00)clk_pass
+LIG(0,10,5,10)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(40,20,45,20)
+LIG(0,20,5,20)
+LIG(25,55,25,60)
+LIG(40,40,45,40)
+LIG(5,5,5,55)
+LIG(5,5,40,5)
+LIG(40,5,40,55)
+LIG(40,55,5,55)
+VLG module rejszdwk( mode,clk,rst,in_rev,in,out,clk_pass);
+VLG  input mode,clk,rst,in_rev,in;
+VLG  output out,clk_pass;
+VLG  wire w4,w6,w7,w10,w12;
+VLG  not #(1) inv_1(w4,mode);
+VLG  and #(2) and2_2(w6,in_rev,mode);
+VLG  dreg #(2) dreg_3(out,w10,w7,rst,clk_pass);
+VLG  and #(2) and2_4(w12,in,w4);
+VLG  or #(2) or2_5(w7,w6,w12);
+VLG endmodule
+FSYM

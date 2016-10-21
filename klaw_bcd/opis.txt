@@ -1,0 +1,12 @@
+Zadaniem jest zaprojektowanie dekodera kodujacego sygnaly z przyciskow klawiatury kalkulatora do kodu bcd.
+Kalkulator powinien posiadac przyciski: [0] [1] [2] [3] [4] [5] [6] [7] [8] [9] [SQRT] [*] [/] [ON/AC] [,] [=] [-] [+].
+Musimy zatem zakodowac je wszystkie, aby procesor glowny mial wystarczajaca ilosc informacji do wykonania dzialania.
+
+Liczba 0 ma w kodzie BCD zapis 0000b, musimy wiêc rozró¿niæ wciœniêcie klawisza [0] od braku wciœniêtych klawiszy.
+Sygnaly z klawiatury podziele na dwie czesci po 9 linii kodowane na 4 linie binarne:
+	a) cyfry 1-9 
+	b) znaki dzia³añ i cyfra 0
+W czêœci a) na kod BCD kodowane s¹ cyfry od 1 do 9, brak wcisnietego klawisza to 0000b.
+W czêœci b) znajduj¹ siê linie znaków oraz zera, aby mo¿na by³o rozró¿niæ wciœniêcie zera od braku wciœniêcia klawisza, zero ma tutaj kod 0001b.
+
+Jako element katalogowy uzylem uklad 74147. Dziala on na logice odwrotnej, trzeba wiec bylo odpowiednio podlaczyc przyciski, procesor takze powinien byc zaprogramowany odpowiednio do odczytu liczb zanegowanych.

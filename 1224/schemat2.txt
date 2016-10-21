@@ -1,0 +1,108 @@
+// DSCH Ver 3.0
+// 2013-06-06 21:55:33
+
+module schemat2( L_1,I_4,J_2,K_2,F,B,D,G,
+ A,E,C);
+ input L_1,I_4,J_2,K_2;
+ output F,B,D,G,A,E,C;
+ wire w4,w8,w9,w10,w11,w12,w13,w14;
+ wire w15,w16,w18,w19,w20,w21,w22,w23;
+ wire w24,w25,w26,w28,w29,w31,w32,w33;
+ wire w34,w36,w37,w39,w40,w41,w42,w43;
+ wire w44,w45,w46,w47,w48,w49,w50,w51;
+ wire w53,w54,w55,w56,w57,w58,w59,w60;
+ wire w61,w62,w63,w64,w65,w66,w67,w68;
+ wire w69,w70,w71,w72,w73,w74,w75,w76;
+ wire w77,w78,w79,w80,w81,w82,w83;
+ and #(16) and2_1(w4,J_2,I_4);
+ and #(16) and2_2(w9,K_2,w8);
+ not #(10) inv_3(w10,L_1);
+ not #(10) inv_4(w11,K_2);
+ not #(10) inv_5(w12,J_2);
+ and #(16) and2_6(w13,w11,w12);
+ or #(19) or3_7(G,w14,w15,w16);
+ and #(16) and2_8(w14,I_4,w18);
+ or #(16) or2_9(w18,w13,w10);
+ and #(16) and2_10(w15,w19,w20);
+ not #(10) inv_11(w20,I_4);
+ or #(16) or2_12(w19,J_2,K_2);
+ and #(16) and2_13(w16,K_2,J_2);
+ and #(16) and2_14(w23,w21,w22);
+ not #(10) inv_15(w24,K_2);
+ and #(16) and2_16(E,w25,w26);
+ not #(10) inv_17(w26,L_1);
+ or #(19) or3_18(w25,w23,w9,w4);
+ not #(10) inv_19(w28,L_1);
+ not #(10) inv_20(w29,J_2);
+ and #(16) and2_21(w32,w31,I_4);
+ and #(16) and2_22(w33,K_2,w29);
+ and #(16) and2_23(w34,L_1,J_2);
+ or #(19) or3_24(w37,w36,w33,w34);
+ or #(16) or2_25(A,w37,w32);
+ or #(16) or2_26(w31,J_2,L_1);
+ not #(10) inv_27(w39,I_4);
+ or #(16) or2_28(F,w40,w41);
+ or #(19) or3_29(w40,w42,w43,w44);
+ not #(10) inv_30(w45,J_2);
+ not #(10) inv_31(w46,K_2);
+ not #(10) inv_32(w47,L_1);
+ not #(10) inv_33(w48,J_2);
+ not #(10) inv_34(w49,K_2);
+ and #(16) and3_35(w42,w45,w46,w47);
+ and #(16) and3_36(w43,I_4,w48,w49);
+ and #(16) and2_37(w44,K_2,J_2);
+ and #(16) and2_38(w41,w50,I_4);
+ not #(10) inv_39(w50,L_1);
+ not #(10) inv_40(w22,I_4);
+ not #(10) inv_41(w21,K_2);
+ not #(10) inv_42(w8,J_2);
+ or #(19) or3_43(C,I_4,L_1,w51);
+ xnor #(16) xnor2_44(w51,J_2,K_2);
+ and #(16) and3_45(w36,w39,w24,w28);
+ or #(19) or3_46(w56,w53,w54,w55);
+ and #(16) and3_47(w53,w57,w58,w59);
+ and #(16) and3_48(w54,I_4,J_2,w60);
+ and #(16) and2_49(w55,w61,w62);
+ or #(19) or3_50(w61,w63,w64,w65);
+ not #(10) inv_51(w63,J_2);
+ not #(10) inv_52(w64,K_2);
+ not #(10) inv_53(w65,L_1);
+ not #(10) inv_54(w62,I_4);
+ or #(16) or2_55(w60,K_2,L_1);
+ not #(10) inv_56(w59,L_1);
+ not #(10) inv_57(w58,K_2);
+ not #(10) inv_58(w57,J_2);
+ or #(19) or3_59(w69,w66,w67,w68);
+ and #(16) and2_60(w66,w70,w71);
+ and #(16) and2_61(w67,w72,I_4);
+ and #(16) and3_62(w68,w73,K_2,w74);
+ not #(10) inv_63(w71,I_4);
+ xnor #(16) xnor2_64(w75,K_2,L_1);
+ or #(16) or2_65(w70,w75,w76);
+ and #(16) and2_66(w76,L_1,J_2);
+ or #(16) or2_67(w72,w77,w78);
+ not #(10) inv_68(w74,L_1);
+ not #(10) inv_69(w79,J_2);
+ and #(16) and3_70(w77,w79,w80,L_1);
+ not #(10) inv_71(w80,K_2);
+ and #(16) and2_72(w78,w81,J_2);
+ not #(10) inv_73(w81,L_1);
+ not #(10) inv_74(w73,J_2);
+ and #(16) and3_75(w82,I_4,J_2,K_2);
+ or #(16) or2_76(D,w69,w82);
+ and #(16) and3_77(w83,I_4,K_2,L_1);
+ or #(16) or2_78(B,w56,w83);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 L - 1=~L - 1;
+#2000 I - 4=~I - 4;
+#4000 J - 2=~J - 2;
+#8000 K - 2=~K - 2;
+
+// Simulation parameters
+// L - 1 CLK 10 10
+// I - 4 CLK 20 20
+// J - 2 CLK 40 40
+// K - 2 CLK 80 80

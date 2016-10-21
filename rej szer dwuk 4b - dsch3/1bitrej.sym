@@ -1,0 +1,34 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-10-27 01:13:52
+SYM  #1bitrej
+BB(0,0,20,50)
+TITLE 10 -7  #1b rejestr szeregowy
+MODEL 6000
+REC(5,5,10,40)
+PIN(0,20,0.00,0.00)mode
+PIN(0,40,0.00,0.00)clk
+PIN(0,30,0.00,0.00)rst
+PIN(0,10,0.00,0.00)in
+PIN(20,20,0.00,0.00)in_rev
+PIN(20,10,2.00,1.00)out
+LIG(0,20,5,20)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,10,5,10)
+LIG(15,20,20,20)
+LIG(15,10,20,10)
+LIG(5,5,5,45)
+LIG(5,5,15,5)
+LIG(15,5,15,45)
+LIG(15,45,5,45)
+VLG module 1bitrej( mode,clk,rst,in,in_rev,out);
+VLG  input mode,clk,rst,in,in_rev;
+VLG  output out;
+VLG  wire w4,w6,w7,w10,w12;
+VLG  not #(1) inv_1(w4,mode);
+VLG  and #(2) and2_2(w6,in_rev,mode);
+VLG  dreg #(2) dreg_3(out,w10,w7,rst,clk);
+VLG  and #(2) and2_4(w12,in,w4);
+VLG  or #(2) or2_5(w7,w6,w12);
+VLG endmodule
+FSYM

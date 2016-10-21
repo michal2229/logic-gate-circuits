@@ -1,0 +1,179 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-10-09 15:01:10
+SYM  #mul10
+BB(0,0,20,170)
+TITLE 10 -7  #mul10
+MODEL 6000
+REC(5,5,10,160)
+PIN(0,40,0.00,0.00)in3
+PIN(0,50,0.00,0.00)in4
+PIN(0,90,0.00,0.00)in8
+PIN(0,100,0.00,0.00)in9
+PIN(0,10,0.00,0.00)in0
+PIN(0,80,0.00,0.00)in7
+PIN(0,70,0.00,0.00)in6
+PIN(0,60,0.00,0.00)in5
+PIN(0,30,0.00,0.00)in2
+PIN(0,20,0.00,0.00)in1
+PIN(20,160,2.00,1.00)Wf
+PIN(20,140,2.00,1.00)Wd
+PIN(20,120,2.00,1.00)Wb
+PIN(20,110,2.00,1.00)Wa
+PIN(20,100,2.00,1.00)W9
+PIN(20,90,2.00,1.00)W8
+PIN(20,80,2.00,1.00)W7
+PIN(20,70,2.00,1.00)W6
+PIN(20,50,2.00,1.00)W4
+PIN(20,40,2.00,1.00)W3
+PIN(20,20,2.00,1.00)W1
+PIN(20,150,2.00,1.00)We
+PIN(20,10,2.00,1.00)W0
+PIN(20,130,2.00,1.00)Wc
+PIN(20,60,2.00,1.00)W5
+PIN(20,30,2.00,1.00)W2
+LIG(0,40,5,40)
+LIG(0,50,5,50)
+LIG(0,90,5,90)
+LIG(0,100,5,100)
+LIG(0,10,5,10)
+LIG(0,80,5,80)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(15,160,20,160)
+LIG(15,140,20,140)
+LIG(15,120,20,120)
+LIG(15,110,20,110)
+LIG(15,100,20,100)
+LIG(15,90,20,90)
+LIG(15,80,20,80)
+LIG(15,70,20,70)
+LIG(15,50,20,50)
+LIG(15,40,20,40)
+LIG(15,20,20,20)
+LIG(15,150,20,150)
+LIG(15,10,20,10)
+LIG(15,130,20,130)
+LIG(15,60,20,60)
+LIG(15,30,20,30)
+LIG(5,5,5,165)
+LIG(5,5,15,5)
+LIG(15,5,15,165)
+LIG(15,165,5,165)
+VLG module mul10( in3,in4,in8,in9,in0,in7,in6,in5,
+VLG  in2,in1,Wf,Wd,Wb,Wa,W9,W8,
+VLG  W7,W6,W4,W3,W1,We,W0,Wc,
+VLG  W5,W2);
+VLG  input in3,in4,in8,in9,in0,in7,in6,in5;
+VLG  input in2,in1;
+VLG  output Wf,Wd,Wb,Wa,W9,W8,W7,W6;
+VLG  output W4,W3,W1,We,W0,Wc,W5,W2;
+VLG  wire w14,w29,w30,w31,w32,w33,w34,w35;
+VLG  wire w36,w37,w38,w39,w40,w41,w42,w43;
+VLG  wire w44,w45,w46,w47,w48,w49,w50,w51;
+VLG  wire w52,w53,w54,w55,w56,w57,w58,w59;
+VLG  wire w60,w61,w62,w63,w64,w65,w66,w67;
+VLG  wire w68,w69,w70,w71,w72,w73,w74,w75;
+VLG  wire w76,w77,w78,w79,w80,w81,w82,w83;
+VLG  wire w84,w85,w86,w87,w88,w89,w90,w91;
+VLG  wire w92,w93,w94,w95,w96,w97,w98,w99;
+VLG  wire w100,w101,w102,w103,w104,w105,w106,w107;
+VLG  or #(2) or3_1_1_1(w32,w29,w30,w31);
+VLG  and #(1) and2_2_2_2(w31,vss,vss);
+VLG  and #(1) and2_3_3_3(w30,vss,vss);
+VLG  and #(1) and2_4_4_4(w29,vss,vss);
+VLG  xor #(1) xor2_5_5_5(W0,w33,vss);
+VLG  xor #(1) xor2_6_6_6(w33,vss,vss);
+VLG  or #(2) or3_1_7_7(w37,w34,w35,w36);
+VLG  and #(1) and2_2_8_8(w36,w32,vss);
+VLG  and #(1) and2_3_9_9(w35,w32,in0);
+VLG  and #(1) and2_4_10_10(w34,vss,in0);
+VLG  xor #(1) xor2_5_11_11(W1,w38,w32);
+VLG  xor #(1) xor2_6_12_12(w38,in0,vss);
+VLG  or #(2) or3_1_13_13(w42,w39,w40,w41);
+VLG  and #(1) and2_2_14_14(w41,w37,vss);
+VLG  and #(1) and2_3_15_15(w40,w37,in1);
+VLG  and #(1) and2_4_16_16(w39,vss,in1);
+VLG  xor #(1) xor2_5_17_17(W2,w43,w37);
+VLG  xor #(1) xor2_6_18_18(w43,in1,vss);
+VLG  or #(2) or3_1_19_19(w47,w44,w45,w46);
+VLG  and #(1) and2_2_20_20(w46,w42,in0);
+VLG  and #(1) and2_3_21_21(w45,w42,in2);
+VLG  and #(1) and2_4_22_22(w44,in0,in2);
+VLG  xor #(1) xor2_5_23_23(W3,w48,w42);
+VLG  xor #(1) xor2_6_24_24(w48,in2,in0);
+VLG  or #(2) or3_1_25_25(w52,w49,w50,w51);
+VLG  and #(1) and2_2_26_26(w51,w47,in1);
+VLG  and #(1) and2_3_27_27(w50,w47,in3);
+VLG  and #(1) and2_4_28_28(w49,in1,in3);
+VLG  xor #(1) xor2_5_29_29(W4,w53,w47);
+VLG  xor #(1) xor2_6_30_30(w53,in3,in1);
+VLG  or #(2) or3_1_31_31(w57,w54,w55,w56);
+VLG  and #(1) and2_2_32_32(w56,w52,in2);
+VLG  and #(1) and2_3_33_33(w55,w52,in4);
+VLG  and #(1) and2_4_34_34(w54,in2,in4);
+VLG  xor #(1) xor2_5_35_35(W5,w58,w52);
+VLG  xor #(1) xor2_6_36_36(w58,in4,in2);
+VLG  or #(2) or3_1_37_37(w62,w59,w60,w61);
+VLG  and #(1) and2_2_38_38(w61,w57,in3);
+VLG  and #(1) and2_3_39_39(w60,w57,in5);
+VLG  and #(1) and2_4_40_40(w59,in3,in5);
+VLG  xor #(1) xor2_5_41_41(W6,w63,w57);
+VLG  xor #(1) xor2_6_42_42(w63,in5,in3);
+VLG  or #(2) or3_1_43_43(w67,w64,w65,w66);
+VLG  and #(1) and2_2_44_44(w66,w62,in4);
+VLG  and #(1) and2_3_45_45(w65,w62,in6);
+VLG  and #(1) and2_4_46_46(w64,in4,in6);
+VLG  xor #(1) xor2_5_47_47(W7,w68,w62);
+VLG  xor #(1) xor2_6_48_48(w68,in6,in4);
+VLG  or #(1) or3_1_49_49(w14,w69,w70,w71);
+VLG  and #(1) and2_2_50_50(w71,w72,vss);
+VLG  and #(1) and2_3_51_51(w70,w72,vss);
+VLG  and #(1) and2_4_52_52(w69,vss,vss);
+VLG  xor #(1) xor2_5_53_53(Wf,w73,w72);
+VLG  xor #(1) xor2_6_54_54(w73,vss,vss);
+VLG  or #(2) or3_1_55_55(w72,w74,w75,w76);
+VLG  and #(1) and2_2_56_56(w76,w77,vss);
+VLG  and #(1) and2_3_57_57(w75,w77,vss);
+VLG  and #(1) and2_4_58_58(w74,vss,vss);
+VLG  xor #(1) xor2_5_59_59(We,w78,w77);
+VLG  xor #(1) xor2_6_60_60(w78,vss,vss);
+VLG  or #(2) or3_1_61_61(w77,w79,w80,w81);
+VLG  and #(1) and2_2_62_62(w81,w82,vss);
+VLG  and #(1) and2_3_63_63(w80,w82,vss);
+VLG  and #(1) and2_4_64_64(w79,vss,vss);
+VLG  xor #(1) xor2_5_65_65(Wd,w83,w82);
+VLG  xor #(1) xor2_6_66_66(w83,vss,vss);
+VLG  or #(2) or3_1_67_67(w82,w84,w85,w86);
+VLG  and #(1) and2_2_68_68(w86,w87,in9);
+VLG  and #(1) and2_3_69_69(w85,w87,vss);
+VLG  and #(1) and2_4_70_70(w84,in9,vss);
+VLG  xor #(1) xor2_5_71_71(Wc,w88,w87);
+VLG  xor #(1) xor2_6_72_72(w88,vss,in9);
+VLG  or #(2) or3_1_73_73(w87,w89,w90,w91);
+VLG  and #(1) and2_2_74_74(w91,w92,in8);
+VLG  and #(1) and2_3_75_75(w90,w92,vss);
+VLG  and #(1) and2_4_76_76(w89,in8,vss);
+VLG  xor #(1) xor2_5_77_77(Wb,w93,w92);
+VLG  xor #(1) xor2_6_78_78(w93,vss,in8);
+VLG  or #(2) or3_1_79_79(w92,w94,w95,w96);
+VLG  and #(1) and2_2_80_80(w96,w97,in7);
+VLG  and #(1) and2_3_81_81(w95,w97,in9);
+VLG  and #(1) and2_4_82_82(w94,in7,in9);
+VLG  xor #(1) xor2_5_83_83(Wa,w98,w97);
+VLG  xor #(1) xor2_6_84_84(w98,in9,in7);
+VLG  or #(2) or3_1_85_85(w97,w99,w100,w101);
+VLG  and #(1) and2_2_86_86(w101,w102,in6);
+VLG  and #(1) and2_3_87_87(w100,w102,in8);
+VLG  and #(1) and2_4_88_88(w99,in6,in8);
+VLG  xor #(1) xor2_5_89_89(W9,w103,w102);
+VLG  xor #(1) xor2_6_90_90(w103,in8,in6);
+VLG  or #(2) or3_1_91_91(w102,w104,w105,w106);
+VLG  and #(1) and2_2_92_92(w106,w67,in5);
+VLG  and #(1) and2_3_93_93(w105,w67,in7);
+VLG  and #(1) and2_4_94_94(w104,in5,in7);
+VLG  xor #(1) xor2_5_95_95(W8,w107,w67);
+VLG  xor #(1) xor2_6_96_96(w107,in7,in5);
+VLG endmodule
+FSYM

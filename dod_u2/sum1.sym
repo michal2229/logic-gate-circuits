@@ -1,0 +1,33 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-11-13 01:21:09
+SYM  #sum1
+BB(0,0,20,40)
+TITLE 10 -7  #sum1
+MODEL 6000
+REC(5,5,10,30)
+PIN(0,10,0.00,0.00)A
+PIN(0,20,0.00,0.00)B
+PIN(0,30,0.00,0.00)C_in
+PIN(20,10,2.00,1.00)C_out
+PIN(20,20,2.00,1.00)Q
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(15,10,20,10)
+LIG(15,20,20,20)
+LIG(5,5,5,35)
+LIG(5,5,15,5)
+LIG(15,5,15,35)
+LIG(15,35,5,35)
+VLG module sum1( A,B,C_in,C_out,Q);
+VLG  input A,B,C_in;
+VLG  output C_out,Q;
+VLG  wire w4,w5,w6,w9,;
+VLG  or #(3) or3_1(C_out,w4,w5,w6);
+VLG  and #(2) and2_2(w6,A,C_in);
+VLG  xor #(2) xor2_3(w9,A,B);
+VLG  and #(2) and2_4(w5,C_in,B);
+VLG  xor #(2) xor2_5(Q,w9,C_in);
+VLG  and #(2) and2_6(w4,B,A);
+VLG endmodule
+FSYM

@@ -1,0 +1,47 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-11-14 01:29:55
+SYM  #licz_8b
+BB(0,0,40,90)
+TITLE 10 -7  #licz_8b
+MODEL 6000
+REC(5,5,30,80)
+PIN(0,10,0.00,0.00)in
+PIN(0,20,0.00,0.00)reset
+PIN(40,80,2.00,1.00)out8
+PIN(40,70,2.00,1.00)out7
+PIN(40,60,2.00,1.00)out6
+PIN(40,50,2.00,1.00)out5
+PIN(40,40,2.00,1.00)out4
+PIN(40,30,2.00,1.00)out3
+PIN(40,20,2.00,1.00)out2
+PIN(40,10,2.00,1.00)out1
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(35,80,40,80)
+LIG(35,70,40,70)
+LIG(35,60,40,60)
+LIG(35,50,40,50)
+LIG(35,40,40,40)
+LIG(35,30,40,30)
+LIG(35,20,40,20)
+LIG(35,10,40,10)
+LIG(5,5,5,85)
+LIG(5,5,35,5)
+LIG(35,5,35,85)
+LIG(35,85,5,85)
+VLG module licz_8b( in,reset,out8,out7,out6,out5,out4,out3,
+VLG  out2,out1);
+VLG  input in,reset;
+VLG  output out8,out7,out6,out5,out4,out3,out2,out1;
+VLG  wire w2,w6,w8,w10,w12,w14,w16,w18;
+VLG  wire ;
+VLG  dreg #(3) dreg_1(out1,w2,w2,reset,in);
+VLG  dreg #(3) dreg_2(out2,w6,w6,reset,out1);
+VLG  dreg #(3) dreg_3(out3,w8,w8,reset,out2);
+VLG  dreg #(3) dreg_4(out4,w10,w10,reset,out3);
+VLG  dreg #(3) dreg_5(out5,w12,w12,reset,out4);
+VLG  dreg #(3) dreg_6(out6,w14,w14,reset,out5);
+VLG  dreg #(3) dreg_7(out7,w16,w16,reset,out6);
+VLG  dreg #(3) dreg_8(out8,w18,w18,reset,out7);
+VLG endmodule
+FSYM

@@ -1,0 +1,126 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 2013-06-06 21:55:33
+SYM  #schemat2
+BB(0,0,40,80)
+TITLE 10 -7  #schemat2
+MODEL 6000
+REC(5,5,30,70)
+PIN(0,40,0.00,0.00)L_1
+PIN(0,10,0.00,0.00)I_4
+PIN(0,20,0.00,0.00)J_2
+PIN(0,30,0.00,0.00)K_2
+PIN(40,60,2.00,1.00)F
+PIN(40,20,2.00,1.00)B
+PIN(40,40,2.00,1.00)D
+PIN(40,70,2.00,1.00)G
+PIN(40,10,2.00,1.00)A
+PIN(40,50,2.00,1.00)E
+PIN(40,30,2.00,1.00)C
+LIG(0,40,5,40)
+LIG(0,10,5,10)
+LIG(0,20,5,20)
+LIG(0,30,5,30)
+LIG(35,60,40,60)
+LIG(35,20,40,20)
+LIG(35,40,40,40)
+LIG(35,70,40,70)
+LIG(35,10,40,10)
+LIG(35,50,40,50)
+LIG(35,30,40,30)
+LIG(5,5,5,75)
+LIG(5,5,35,5)
+LIG(35,5,35,75)
+LIG(35,75,5,75)
+VLG module schemat2( L_1,I_4,J_2,K_2,F,B,D,G,
+VLG  A,E,C);
+VLG  input L_1,I_4,J_2,K_2;
+VLG  output F,B,D,G,A,E,C;
+VLG  wire w4,w8,w9,w10,w11,w12,w13,w14;
+VLG  wire w15,w16,w18,w19,w20,w21,w22,w23;
+VLG  wire w24,w25,w26,w28,w29,w31,w32,w33;
+VLG  wire w34,w36,w37,w39,w40,w41,w42,w43;
+VLG  wire w44,w45,w46,w47,w48,w49,w50,w51;
+VLG  wire w53,w54,w55,w56,w57,w58,w59,w60;
+VLG  wire w61,w62,w63,w64,w65,w66,w67,w68;
+VLG  wire w69,w70,w71,w72,w73,w74,w75,w76;
+VLG  wire w77,w78,w79,w80,w81,w82,w83;
+VLG  and #(16) and2_1(w4,J_2,I_4);
+VLG  and #(16) and2_2(w9,K_2,w8);
+VLG  not #(10) inv_3(w10,L_1);
+VLG  not #(10) inv_4(w11,K_2);
+VLG  not #(10) inv_5(w12,J_2);
+VLG  and #(16) and2_6(w13,w11,w12);
+VLG  or #(19) or3_7(G,w14,w15,w16);
+VLG  and #(16) and2_8(w14,I_4,w18);
+VLG  or #(16) or2_9(w18,w13,w10);
+VLG  and #(16) and2_10(w15,w19,w20);
+VLG  not #(10) inv_11(w20,I_4);
+VLG  or #(16) or2_12(w19,J_2,K_2);
+VLG  and #(16) and2_13(w16,K_2,J_2);
+VLG  and #(16) and2_14(w23,w21,w22);
+VLG  not #(10) inv_15(w24,K_2);
+VLG  and #(16) and2_16(E,w25,w26);
+VLG  not #(10) inv_17(w26,L_1);
+VLG  or #(19) or3_18(w25,w23,w9,w4);
+VLG  not #(10) inv_19(w28,L_1);
+VLG  not #(10) inv_20(w29,J_2);
+VLG  and #(16) and2_21(w32,w31,I_4);
+VLG  and #(16) and2_22(w33,K_2,w29);
+VLG  and #(16) and2_23(w34,L_1,J_2);
+VLG  or #(19) or3_24(w37,w36,w33,w34);
+VLG  or #(16) or2_25(A,w37,w32);
+VLG  or #(16) or2_26(w31,J_2,L_1);
+VLG  not #(10) inv_27(w39,I_4);
+VLG  or #(16) or2_28(F,w40,w41);
+VLG  or #(19) or3_29(w40,w42,w43,w44);
+VLG  not #(10) inv_30(w45,J_2);
+VLG  not #(10) inv_31(w46,K_2);
+VLG  not #(10) inv_32(w47,L_1);
+VLG  not #(10) inv_33(w48,J_2);
+VLG  not #(10) inv_34(w49,K_2);
+VLG  and #(16) and3_35(w42,w45,w46,w47);
+VLG  and #(16) and3_36(w43,I_4,w48,w49);
+VLG  and #(16) and2_37(w44,K_2,J_2);
+VLG  and #(16) and2_38(w41,w50,I_4);
+VLG  not #(10) inv_39(w50,L_1);
+VLG  not #(10) inv_40(w22,I_4);
+VLG  not #(10) inv_41(w21,K_2);
+VLG  not #(10) inv_42(w8,J_2);
+VLG  or #(19) or3_43(C,I_4,L_1,w51);
+VLG  xnor #(16) xnor2_44(w51,J_2,K_2);
+VLG  and #(16) and3_45(w36,w39,w24,w28);
+VLG  or #(19) or3_46(w56,w53,w54,w55);
+VLG  and #(16) and3_47(w53,w57,w58,w59);
+VLG  and #(16) and3_48(w54,I_4,J_2,w60);
+VLG  and #(16) and2_49(w55,w61,w62);
+VLG  or #(19) or3_50(w61,w63,w64,w65);
+VLG  not #(10) inv_51(w63,J_2);
+VLG  not #(10) inv_52(w64,K_2);
+VLG  not #(10) inv_53(w65,L_1);
+VLG  not #(10) inv_54(w62,I_4);
+VLG  or #(16) or2_55(w60,K_2,L_1);
+VLG  not #(10) inv_56(w59,L_1);
+VLG  not #(10) inv_57(w58,K_2);
+VLG  not #(10) inv_58(w57,J_2);
+VLG  or #(19) or3_59(w69,w66,w67,w68);
+VLG  and #(16) and2_60(w66,w70,w71);
+VLG  and #(16) and2_61(w67,w72,I_4);
+VLG  and #(16) and3_62(w68,w73,K_2,w74);
+VLG  not #(10) inv_63(w71,I_4);
+VLG  xnor #(16) xnor2_64(w75,K_2,L_1);
+VLG  or #(16) or2_65(w70,w75,w76);
+VLG  and #(16) and2_66(w76,L_1,J_2);
+VLG  or #(16) or2_67(w72,w77,w78);
+VLG  not #(10) inv_68(w74,L_1);
+VLG  not #(10) inv_69(w79,J_2);
+VLG  and #(16) and3_70(w77,w79,w80,L_1);
+VLG  not #(10) inv_71(w80,K_2);
+VLG  and #(16) and2_72(w78,w81,J_2);
+VLG  not #(10) inv_73(w81,L_1);
+VLG  not #(10) inv_74(w73,J_2);
+VLG  and #(16) and3_75(w82,I_4,J_2,K_2);
+VLG  or #(16) or2_76(D,w69,w82);
+VLG  and #(16) and3_77(w83,I_4,K_2,L_1);
+VLG  or #(16) or2_78(B,w56,w83);
+VLG endmodule
+FSYM

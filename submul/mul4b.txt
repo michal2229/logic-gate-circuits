@@ -1,0 +1,80 @@
+// DSCH Ver 3.0
+// 2013-06-12 01:09:57
+// D:\dane\chmura\Dropbox\Moje\rozne\liczenie\na studia\Uk³ady Cyfrowe i Mikroprocesorowe\zadania\zlecone\submul\mul4b.sch
+
+module mul4b( A0,A1,A2,A3,B0,B1,B2,B3,
+ Q3,Q2,Q1,Q0,P);
+ input A0,A1,A2,A3,B0,B1,B2,B3;
+ output Q3,Q2,Q1,Q0,P;
+ wire w10,w11,w12,w13,w14,w15,w16,w17;
+ wire w18,w19,w20,w21,w22,w23,w24,w25;
+ wire w26,w27,w29,w30,w32,w33,w34,w35;
+ wire w36,w37,w38,w39,w40,w41,w42,w43;
+ wire w45,w46,w47,w50,w51,w52,w53,w54;
+ and #(37) and2_1(w10,B0,A3);
+ and #(30) and2_2(w11,B1,A2);
+ and #(44) and2_3(w12,B2,A1);
+ and #(44) and2_4(w13,B3,A0);
+ or #(16) or2_5(w15,w10,w14);
+ or #(19) or3_6(w14,w11,w12,w13);
+ and #(16) and2_7(w17,w16,w15);
+ or #(19) or3_8(w18,w10,w12,w13);
+ and #(16) and2_9(w19,w11,w18);
+ or #(16) or2_10(w20,w12,w13);
+ and #(16) and2_11(w21,w20,w10);
+ and #(16) and2_12(w22,w13,w12);
+ or #(19) or3_13(w23,w19,w21,w22);
+ or #(16) or2_14(w24,w17,w23);
+ xor #(16) xor2_15(w27,w25,w26);
+ xor #(16) xor2_16(Q3,w27,w16);
+ xor #(16) xor2_17(w26,w12,w13);
+ xor #(16) xor2_18(w25,w10,w11);
+ or #(19) or3_19(P,w29,w24,w30);
+ xor #(16) xor2_20(w34,w32,w33);
+ or #(16) or2_21(w37,w35,w36);
+ and #(16) and2_22(w38,w37,w34);
+ and #(16) and2_23(w39,w33,w32);
+ and #(16) and2_24(w40,w36,w35);
+ xor #(16) xor2_25(w41,w39,w40);
+ or #(23) or2_26(w16,w38,w41);
+ and #(37) and2_27(w33,B0,A2);
+ and #(37) and2_28(w35,B1,A1);
+ and #(37) and2_29(w36,B2,A0);
+ xor #(16) xor2_30(w42,w33,w35);
+ xor #(16) xor2_31(w43,w36,w32);
+ xor #(16) xor2_32(Q2,w42,w43);
+ and #(16) and3_33(w45,w33,w35,w36);
+ and #(16) and2_34(w30,w45,w32);
+ and #(23) and2_35(w46,B0,A1);
+ and #(23) and2_36(w47,B1,A0);
+ xor #(16) xor2_37(Q1,w47,w46);
+ and #(37) and2_38(w32,w47,w46);
+ and #(16) and2_39(Q0,B0,A0);
+ or #(19) or3_40(w50,B1,B2,B3);
+ and #(16) and2_41(w51,w50,A3);
+ and #(16) and2_42(w52,B3,A1);
+ or #(16) or2_43(w53,B2,B3);
+ and #(16) and2_44(w54,w53,A2);
+ or #(19) or3_45(w29,w52,w54,w51);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 A0=~A0;
+#2000 A1=~A1;
+#4000 A2=~A2;
+#8000 A3=~A3;
+#16000 B0=~B0;
+#32000 B1=~B1;
+#64000 B2=~B2;
+#128000 B3=~B3;
+
+// Simulation parameters
+// A0 CLK 10 10
+// A1 CLK 20 20
+// A2 CLK 40 40
+// A3 CLK 80 80
+// B0 CLK 160 160
+// B1 CLK 320 320
+// B2 CLK 640 640
+// B3 CLK 1280 1280

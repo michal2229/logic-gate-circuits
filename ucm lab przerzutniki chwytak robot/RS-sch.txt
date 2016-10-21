@@ -1,0 +1,24 @@
+// DSCH Ver 3.0
+// 2013-06-16 13:06:28
+// D:\dane\chmura\Dropbox\Moje\rozne\liczenie\na studia\Uk³ady Cyfrowe i Mikroprocesorowe\zadania\ucm lab przerzutniki\RS-sch.sch
+
+module RSsch( S,R,CLK,Q,nQ);
+ input S,R,CLK;
+ output Q,nQ;
+ wire w3,w5,;
+ nand #(20) nand2_1(Q,nQ,w3);
+ nand #(20) nand2_2(nQ,w5,Q);
+ nand #(13) nand2_3(w3,CLK,S);
+ nand #(13) nand2_4(w5,R,CLK);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 S=~S;
+#2000 R=~R;
+#4000 CLK=~CLK;
+
+// Simulation parameters
+// S CLK 10 10
+// R CLK 20 20
+// CLK CLK 40 40

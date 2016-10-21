@@ -1,0 +1,46 @@
+USER SYMBOL by DSCH 3.5
+DATE 2014-01-28 00:42:25
+SYM  #1z8_hex
+BB(0,0,40,90)
+TITLE 10 -7  #1z8_hex
+MODEL 6000
+REC(5,5,30,80)
+PIN(0,10,0.00,0.00)c00d
+PIN(0,40,0.00,0.00)c33d
+PIN(0,80,0.00,0.00)c77d
+PIN(0,70,0.00,0.00)c66d
+PIN(0,60,0.00,0.00)c55d
+PIN(0,50,0.00,0.00)c44d
+PIN(0,30,0.00,0.00)c22d
+PIN(0,20,0.00,0.00)c11d
+PIN(40,30,2.00,1.00)c44b
+PIN(40,10,2.00,1.00)c11b
+PIN(40,20,2.00,1.00)c22b
+LIG(0,10,5,10)
+LIG(0,40,5,40)
+LIG(0,80,5,80)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,50,5,50)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(35,30,40,30)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(5,5,5,85)
+LIG(5,5,35,5)
+LIG(35,5,35,85)
+LIG(35,85,5,85)
+VLG module 1z8_hex( c00d,c33d,c77d,c66d,c55d,c44d,c22d,c11d,
+VLG  c44b,c11b,c22b);
+VLG  input c00d,c33d,c77d,c66d,c55d,c44d,c22d,c11d;
+VLG  output c44b,c11b,c22b;
+VLG  wire w5,w13,w14,;
+VLG  or #(3) or3_1(w5,c22d,c33d,c66d);
+VLG  or #(2) or2_2(c22b,w5,c77d);
+VLG  or #(3) or3_3(w13,c44d,c55d,c66d);
+VLG  or #(2) or2_4(c11b,w14,c77d);
+VLG  or #(2) or2_5(c44b,w13,c77d);
+VLG  or #(3) or3_6(w14,c11d,c33d,c55d);
+VLG endmodule
+FSYM

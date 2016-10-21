@@ -1,0 +1,149 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-11-28 00:42:24
+SYM  #8badder
+BB(0,0,60,180)
+TITLE 10 -7  #8badder
+MODEL 6000
+REC(5,5,50,170)
+PIN(0,170,0.00,0.00)B7
+PIN(0,160,0.00,0.00)B6
+PIN(0,150,0.00,0.00)B5
+PIN(0,140,0.00,0.00)B4
+PIN(0,130,0.00,0.00)B3
+PIN(0,120,0.00,0.00)B2
+PIN(0,110,0.00,0.00)B1
+PIN(0,100,0.00,0.00)B0
+PIN(35,180,0.00,0.00)C_we
+PIN(0,80,0.00,0.00)A7
+PIN(0,70,0.00,0.00)A6
+PIN(0,60,0.00,0.00)A5
+PIN(0,50,0.00,0.00)A4
+PIN(0,40,0.00,0.00)A3
+PIN(0,30,0.00,0.00)A2
+PIN(0,20,0.00,0.00)A1
+PIN(0,10,0.00,0.00)A0
+PIN(15,180,0.00,0.00)A_m
+PIN(25,180,0.00,0.00)B_m
+PIN(60,40,2.00,1.00)Q2
+PIN(60,50,2.00,1.00)Q3
+PIN(60,20,2.00,1.00)Q0
+PIN(60,10,2.00,1.00)C_wy
+PIN(60,80,2.00,1.00)Q6
+PIN(60,70,2.00,1.00)Q5
+PIN(60,60,2.00,1.00)Q4
+PIN(60,30,2.00,1.00)Q1
+PIN(60,90,2.00,1.00)Q7
+LIG(0,170,5,170)
+LIG(0,160,5,160)
+LIG(0,150,5,150)
+LIG(0,140,5,140)
+LIG(0,130,5,130)
+LIG(0,120,5,120)
+LIG(0,110,5,110)
+LIG(0,100,5,100)
+LIG(35,175,35,180)
+LIG(0,80,5,80)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,50,5,50)
+LIG(0,40,5,40)
+LIG(0,30,5,30)
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(15,175,15,180)
+LIG(25,175,25,180)
+LIG(55,40,60,40)
+LIG(55,50,60,50)
+LIG(55,20,60,20)
+LIG(55,10,60,10)
+LIG(55,80,60,80)
+LIG(55,70,60,70)
+LIG(55,60,60,60)
+LIG(55,30,60,30)
+LIG(55,90,60,90)
+LIG(5,5,5,175)
+LIG(5,5,55,5)
+LIG(55,5,55,175)
+LIG(55,175,5,175)
+VLG module 8badder( B7,B6,B5,B4,B3,B2,B1,B0,
+VLG  C_we,A7,A6,A5,A4,A3,A2,A1,
+VLG  A0,A_m,B_m,Q2,Q3,Q0,C_wy,Q6,
+VLG  Q5,Q4,Q1,Q7);
+VLG  input B7,B6,B5,B4,B3,B2,B1,B0;
+VLG  input C_we,A7,A6,A5,A4,A3,A2,A1;
+VLG  input A0,A_m,B_m;
+VLG  output Q2,Q3,Q0,C_wy,Q6,Q5,Q4,Q1;
+VLG  output Q7;
+VLG  wire w3,w4,w6,w16,w17,w18,w19,w20;
+VLG  wire w21,w22,w25,w27,w29,w31,w33,w35;
+VLG  wire w37,w38,w41,w43,w46,w47,w50,w53;
+VLG  wire w54,w55,w56,w57,w58,w59,w60,w61;
+VLG  wire w62,w63,w64,w65,w66,w67,w68,w69;
+VLG  wire w70,w71,w72,w73,w74,w75,w76,w77;
+VLG  wire w78,w79,w80,w81,w82,w83,w84;
+VLG  and #(3) and2_1(w16,B7,B_m);
+VLG  and #(3) and2_2(w17,B6,B_m);
+VLG  and #(3) and2_3(w18,B5,B_m);
+VLG  and #(3) and2_4(w19,B4,B_m);
+VLG  and #(3) and2_5(w20,B3,B_m);
+VLG  and #(3) and2_6(w21,B2,B_m);
+VLG  and #(3) and2_7(w22,B1,B_m);
+VLG  and #(3) and2_8(w4,B0,B_m);
+VLG  and #(2) and2_9(w25,A7,A_m);
+VLG  and #(2) and2_10(w27,A6,A_m);
+VLG  and #(2) and2_11(w29,A5,A_m);
+VLG  and #(2) and2_12(w31,A4,A_m);
+VLG  and #(2) and2_13(w33,A3,A_m);
+VLG  and #(2) and2_14(w35,A2,A_m);
+VLG  and #(2) and2_15(w37,A1,A_m);
+VLG  and #(2) and2_16(w3,A0,A_m);
+VLG  xor #(1) xor2_1_17(Q0,w53,w3);
+VLG  xor #(1) xor2_2_18(w53,w4,C_we);
+VLG  xor #(1) xor2_3_19(w54,w4,C_we);
+VLG  or #(2) or2_4_20(w6,w55,w56);
+VLG  and #(1) and2_5_21(w56,C_we,w4);
+VLG  and #(1) and2_6_22(w55,w3,w54);
+VLG  xor #(1) xor2_1_23(Q7,w57,w25);
+VLG  xor #(1) xor2_2_24(w57,w16,w38);
+VLG  xor #(1) xor2_3_25(w58,w16,w38);
+VLG  or #(1) or2_4_26(C_wy,w59,w60);
+VLG  and #(1) and2_5_27(w60,w38,w16);
+VLG  and #(1) and2_6_28(w59,w25,w58);
+VLG  xor #(1) xor2_1_29(Q6,w61,w27);
+VLG  xor #(1) xor2_2_30(w61,w17,w41);
+VLG  xor #(1) xor2_3_31(w62,w17,w41);
+VLG  or #(2) or2_4_32(w38,w63,w64);
+VLG  and #(1) and2_5_33(w64,w41,w17);
+VLG  and #(1) and2_6_34(w63,w27,w62);
+VLG  xor #(1) xor2_1_35(Q5,w65,w29);
+VLG  xor #(1) xor2_2_36(w65,w18,w43);
+VLG  xor #(1) xor2_3_37(w66,w18,w43);
+VLG  or #(2) or2_4_38(w41,w67,w68);
+VLG  and #(1) and2_5_39(w68,w43,w18);
+VLG  and #(1) and2_6_40(w67,w29,w66);
+VLG  xor #(1) xor2_1_41(Q1,w69,w37);
+VLG  xor #(1) xor2_2_42(w69,w22,w6);
+VLG  xor #(1) xor2_3_43(w70,w22,w6);
+VLG  or #(2) or2_4_44(w46,w71,w72);
+VLG  and #(1) and2_5_45(w72,w6,w22);
+VLG  and #(1) and2_6_46(w71,w37,w70);
+VLG  xor #(1) xor2_1_47(Q4,w73,w31);
+VLG  xor #(1) xor2_2_48(w73,w19,w47);
+VLG  xor #(1) xor2_3_49(w74,w19,w47);
+VLG  or #(2) or2_4_50(w43,w75,w76);
+VLG  and #(1) and2_5_51(w76,w47,w19);
+VLG  and #(1) and2_6_52(w75,w31,w74);
+VLG  xor #(1) xor2_1_53(Q3,w77,w33);
+VLG  xor #(1) xor2_2_54(w77,w20,w50);
+VLG  xor #(1) xor2_3_55(w78,w20,w50);
+VLG  or #(2) or2_4_56(w47,w79,w80);
+VLG  and #(1) and2_5_57(w80,w50,w20);
+VLG  and #(1) and2_6_58(w79,w33,w78);
+VLG  xor #(1) xor2_1_59(Q2,w81,w35);
+VLG  xor #(1) xor2_2_60(w81,w21,w46);
+VLG  xor #(1) xor2_3_61(w82,w21,w46);
+VLG  or #(2) or2_4_62(w50,w83,w84);
+VLG  and #(1) and2_5_63(w84,w46,w21);
+VLG  and #(1) and2_6_64(w83,w35,w82);
+VLG endmodule
+FSYM

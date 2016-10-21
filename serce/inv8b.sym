@@ -1,0 +1,93 @@
+USER SYMBOL by DSCH 3.5
+DATE 2013-11-14 03:42:20
+SYM  #inv8b
+BB(0,0,20,100)
+TITLE 10 -7  #inv8b
+MODEL 6000
+REC(5,5,10,90)
+PIN(0,40,0.00,0.00)d
+PIN(0,20,0.00,0.00)b
+PIN(0,10,0.00,0.00)a
+PIN(0,30,0.00,0.00)c
+PIN(0,50,0.00,0.00)e
+PIN(0,90,0.00,0.00)minus
+PIN(0,70,0.00,0.00)g
+PIN(0,60,0.00,0.00)f
+PIN(0,80,0.00,0.00)h
+PIN(20,40,2.00,1.00)D_
+PIN(20,20,2.00,1.00)B_
+PIN(20,50,2.00,1.00)E_
+PIN(20,30,2.00,1.00)C_
+PIN(20,10,2.00,1.00)A_
+PIN(20,70,2.00,1.00)G_
+PIN(20,80,2.00,1.00)H_
+PIN(20,60,2.00,1.00)F_
+LIG(0,40,5,40)
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(0,30,5,30)
+LIG(0,50,5,50)
+LIG(0,90,5,90)
+LIG(0,70,5,70)
+LIG(0,60,5,60)
+LIG(0,80,5,80)
+LIG(15,40,20,40)
+LIG(15,20,20,20)
+LIG(15,50,20,50)
+LIG(15,30,20,30)
+LIG(15,10,20,10)
+LIG(15,70,20,70)
+LIG(15,80,20,80)
+LIG(15,60,20,60)
+LIG(5,5,5,95)
+LIG(5,5,15,5)
+LIG(15,5,15,95)
+LIG(15,95,5,95)
+VLG module inv( d,b,a,c,e,minus,g,f,
+VLG  h,D_,B_,E_,C_,A_,G_,H_,
+VLG  F_);
+VLG  input d,b,a,c,e,minus,g,f;
+VLG  input h;
+VLG  output D_,B_,E_,C_,A_,G_,H_,F_;
+VLG  wire w13,w14,w15,w16,w17,w18,w19,w20;
+VLG  wire w21,w22,w23,w24,w25,w26,w27,w28;
+VLG  wire w35,w36,w37,w38,w39,w40,w41,w42;
+VLG  wire w43,w44,w45,w46;
+VLG  not #(3) inv_1(w13,minus);
+VLG  xor #(2) xor2_2(w14,a,b);
+VLG  and #(2) and2_3(w15,w13,b);
+VLG  and #(2) and2_4(w16,minus,w14);
+VLG  or #(2) or2_5(B_,w16,w15);
+VLG  or #(2) or2_6(w17,a,b);
+VLG  xor #(2) xor2_7(w18,w17,c);
+VLG  and #(2) and2_8(w19,w13,c);
+VLG  or #(2) or2_9(E_,w20,w21);
+VLG  and #(2) and2_10(w22,minus,w18);
+VLG  or #(2) or2_11(C_,w22,w19);
+VLG  or #(2) or2_12(w23,w17,c);
+VLG  xor #(2) xor2_13(w24,w23,d);
+VLG  and #(2) and2_14(w25,w13,d);
+VLG  and #(2) and2_15(w26,minus,w24);
+VLG  or #(2) or2_16(D_,w26,w25);
+VLG  or #(2) or2_17(w27,w23,d);
+VLG  xor #(2) xor2_18(w28,w27,e);
+VLG  and #(2) and2_19(w21,w13,e);
+VLG  and #(2) and2_20(w20,minus,w28);
+VLG  or #(2) or2_21(w35,w27,e);
+VLG  xor #(2) xor2_22(w36,w35,f);
+VLG  and #(2) and2_23(w37,w13,f);
+VLG  or #(2) or2_24(H_,w38,w39);
+VLG  and #(2) and2_25(w40,minus,w36);
+VLG  or #(2) or2_26(F_,w40,w37);
+VLG  or #(2) or2_27(w41,w35,f);
+VLG  xor #(2) xor2_28(w42,w41,g);
+VLG  and #(2) and2_29(w43,w13,g);
+VLG  and #(2) and2_30(w44,minus,w42);
+VLG  or #(2) or2_31(G_,w44,w43);
+VLG  or #(2) or2_32(w45,w41,g);
+VLG  xor #(2) xor2_33(w46,w45,h);
+VLG  and #(2) and2_34(w39,w13,h);
+VLG  and #(2) and2_35(w38,minus,w46);
+VLG  or #(2) or2_36(A_,a,vss);
+VLG endmodule
+FSYM

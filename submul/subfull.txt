@@ -1,0 +1,27 @@
+// DSCH Ver 3.0
+// 2013-06-06 03:44:20
+// D:\dane\chmura\Dropbox\Moje\rozne\liczenie\na studia\Uk³ady Cyfrowe i Mikroprocesorowe\zadania\zlecone\submul\subfull.sch
+
+module subfull( Pin,A,B,Pout,Q);
+ input Pin,A,B;
+ output Pout,Q;
+ wire w3,w5,w6,w7,w9,;
+ xor #(16) xor2_1(Q,Pin,w3);
+ and #(16) and2_2(w6,w5,Pin);
+ or #(16) or2_3(Pout,w6,w7);
+ not #(10) inv_4(w5,w3);
+ and #(16) and2_5(w7,w9,B);
+ not #(10) inv_6(w9,A);
+ xor #(23) xor2_7(w3,A,B);
+endmodule
+
+// Simulation parameters in Verilog Format
+always
+#1000 Pin=~Pin;
+#2000 A=~A;
+#4000 B=~B;
+
+// Simulation parameters
+// Pin CLK 10 10
+// A CLK 20 20
+// B CLK 40 40

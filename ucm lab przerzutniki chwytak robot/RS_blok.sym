@@ -1,0 +1,31 @@
+USER SYMBOL by DSCH Ver 3.0
+DATE 2013-06-16 13:06:28
+SYM  #RS_blok
+BB(0,0,40,40)
+TITLE 10 -7  #RS
+MODEL 6000
+REC(5,5,30,30)
+PIN(0,20,0.00,0.00)S
+PIN(0,10,0.00,0.00)R
+PIN(15,40,0.00,0.00)CLK
+PIN(40,10,2.00,1.00)Q
+PIN(40,20,2.00,1.00)nQ
+LIG(0,20,5,20)
+LIG(0,10,5,10)
+LIG(15,35,15,40)
+LIG(35,10,40,10)
+LIG(35,20,40,20)
+LIG(5,5,5,35)
+LIG(5,5,35,5)
+LIG(35,5,35,35)
+LIG(35,35,5,35)
+VLG module RSsch( S,R,CLK,Q,nQ);
+VLG  input S,R,CLK;
+VLG  output Q,nQ;
+VLG  wire w3,w5,;
+VLG  nand #(20) nand2_1(Q,nQ,w3);
+VLG  nand #(20) nand2_2(nQ,w5,Q);
+VLG  nand #(13) nand2_3(w3,CLK,S);
+VLG  nand #(13) nand2_4(w5,R,CLK);
+VLG endmodule
+FSYM
