@@ -1,6 +1,6 @@
 ## logic-gate-circuits
 
-My old university projects in logic gate circuits synthesis.
+My old university projects in logic gate circuits synthesis made in MICROWIND DSCH 3.5 software.
 
 I made them during my studies at Military University of Technology, Warsaw, Poland.
 
